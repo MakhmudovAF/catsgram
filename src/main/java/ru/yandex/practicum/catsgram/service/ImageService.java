@@ -28,8 +28,7 @@ public class ImageService {
     private final PostService postService;
     private final Map<Long, Image> images = new HashMap<>();
     // директория для хранения изображений
-    @Value("${catsgram.image-directory}")
-    private String imageDirectory;
+    private String imageDirectory = "D:\\IdeaProjects\\Yandex\\catsgram\\image-directory";
 
     // сохранение списка изображений, связанных с указанным постом
     public List<Image> saveImages(long postId, List<MultipartFile> files) {
